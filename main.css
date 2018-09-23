@@ -1,0 +1,171 @@
+/* === MainMenu === */
+
+.mainMenu {
+  background: url(picture/background-footer.jpg)repeat center;
+  width: 100vw;
+  text-align: center;
+  position: fixed;
+  height: 100px;
+}
+
+#logo {
+  background-image: url(picture/logoProjekt.png);
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+#logo a{
+  display: flex;
+  width: 150px;
+  height: 150px;
+}
+
+#logo a:hover{
+  cursor: pointer;
+}
+/* === game === */
+
+.game{
+  width: 100vw;
+  text-align: center;
+  height: 600px;
+  position: fixed;
+  top: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.buttonBackground{
+  width: 150px;
+  height: 150px;
+  background-image: url(picture/buttons/buttonBackground.png);
+  background-size:cover;
+  margin: auto;
+  display:flex;
+  transition-duration: 2s;
+
+  
+}
+
+#buttonPad{
+  /*background-image: url(picture/buttons/buttonGamePad.png);*/
+  width: 120px;
+  margin: 35px 0 0 15px;
+  height: 80px;
+  padding: 5px;
+  transition-duration: 1s;
+}
+
+.buttonBackground:hover{
+  cursor: pointer;
+}
+
+#buttonPad:hover{
+  margin: 30px 0 0 10px;
+  width: 130px;
+  height: 85px;
+}
+
+
+/* === game Marynarzyk === */
+
+.hands {
+  width: 40vw;
+  height: 550px;
+  margin: 20px;
+}
+
+#leftHands {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 700px;
+  bottom: 0;
+  margin: auto;
+}
+
+#rightHands{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 700px;
+  bottom: 0;
+  margin: auto;
+}
+
+
+#rotateRightHand{
+    transform: rotateY(180deg);
+}
+
+img{
+  height: 300px;
+}
+
+.button{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  height: 450px;
+  min-width: 100px;
+}
+
+#start{
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-family: "Times New Roman", Times, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: auto;
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+}
+  .score{
+    font-size: 48px;
+    font-family: "Times New roman", Times, sans-serif;
+  }
+
+
+/* === footer === */
+
+.footer{
+  background: url(picture/background-footer.jpg)repeat center;
+  width: 100vw;
+  text-align: center;
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  display: table;
+
+}
+
+.footer small{
+  color: white;
+  margin-top: 14px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.footer nav{
+  margin: 5px;
+}
+
+.footer a{
+  margin: 0 5px 0 5px;
+}
+
+
+
+
+
