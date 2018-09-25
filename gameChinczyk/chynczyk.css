@@ -1,0 +1,61 @@
+.plansza{
+  border: solid 2px black;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  border-radius: 35px;
+  text-align: center;
+  padding: 5px 0 0 0px;
+  margin: 0.5px;
+  float: left;
+}
+.centerPlansza{
+  margin: auto;
+  margin-bottom: 9px;
+}
+
+#pole22, #pole33, #pole77, #pole88, #pole23, #pole34, #pole24, #pole35, #pole25, #pole36, #pole13, #pole2, #pole3, #pole14,
+ #pole78, #pole89, #pole79, #pole90, #pole80, #pole91, #pole101, #pole102, #pole112, #pole113, #pole7, #pole8, #pole18, #pole19, #pole29, #pole30, #pole31, #pole32, #pole40, #pole41, #pole42, #pole43, #pole84, #pole85, #pole86, #pole87, #pole95, #pole96, #pole97, #pole98, #pole106, #pole107, #pole117, #pole118{
+  visibility: collapse;
+}
+
+#pole59, #pole56, #pole57, #pole58, #pole0, #pole1, #pole11, #pole12{
+  background-color: red;
+}
+
+#pole49, #pole16, #pole27, #pole38, #pole9, #pole10, #pole20, #pole21{
+  background-color: blue;
+}
+
+#pole61, #pole62, #pole63, #pole64, #pole108, #pole109, #pole119, #pole120{
+  background-color: green;
+}
+
+#pole71, #pole82, #pole93, #pole104, #pole99, #pole100, #pole110, #pole111{
+  background-color: yellow;
+}
+
+#pole44{
+  background-color: #fca9a9;
+}
+
+#pole6{
+  background-color: #b7b7ff;
+}
+
+#pole76{
+  background-color: #9bff9b;
+}
+
+#pole114{
+  background-color: #fcfc8a;
+}
+
+.pionekChin{
+  width: 35px;
+  height: 35px;
+}
+
+.pionekChin:hover{
+  cursor: pointer;
+}

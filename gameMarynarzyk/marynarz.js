@@ -42,5 +42,3 @@ function startShowMarynarzyk()
   document.getElementById("buttonStart").innerHTML='<button id="start" onclick="random()">start</button>';
   
 }
-
-
