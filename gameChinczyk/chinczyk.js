@@ -64,17 +64,17 @@ var CheckIDarea = "";
 
 function CheckerID(){
   
-    let body = document.querySelector('.game');
+    var body = document.querySelector('.game');
 
 body.addEventListener("click", function(event) {
-	let id = event.target.id;
+	var id = event.target.id;
 });
   CheckID = "#" + event.target.id;
 }
 
 function CheckerParentID(){
   
-  let el = document.querySelector(CheckID);
+  var el = document.querySelector(CheckID);
   CheckIDarea ="#" + el.parentElement.id;
 }
 
@@ -124,7 +124,7 @@ function startPionkiNiebieskie(){
       if(x == 11) x = 20;
       var id="bP"
       id = id + nr;
-      document.getElementById(PionekPole[x]).innerHTML='<img class="pionekChin" id="'+ id +'" onclick="movePown()" src="'+ bluePawn +'">';
+      document.getElementById(PionekPole[x]).innerHTML='<img class="pionekChin" id="'+ id +'" onclick="StartmovePownBlue()" src="'+ bluePawn +'">';
       x++;
       nr++;
     }
@@ -140,7 +140,7 @@ function startPionkiZolte(){
       if(x == 101) x = 110;
       var id="yP"
       id = id + nr;
-      document.getElementById(PionekPole[x]).innerHTML='<img class="pionekChin" id="'+ id +'" onclick="movePown()" src="'+ yellowPawn +'">';
+      document.getElementById(PionekPole[x]).innerHTML='<img class="pionekChin" id="'+ id +'" onclick="StartmovePownYellow()" src="'+ yellowPawn +'">';
       x++;
       nr++;
     }
@@ -156,7 +156,7 @@ function startPionkiZielone(){
       if(x == 110) x = 119;
       var id="gP";
       id = id + nr;
-      document.getElementById(PionekPole[x]).innerHTML='<img class="pionekChin" id="'+ id +'" onclick="movePown()" src="'+ greenPawn +'">';
+      document.getElementById(PionekPole[x]).innerHTML='<img class="pionekChin" id="'+ id +'" onclick="StartmovePownGreen()" src="'+ greenPawn +'">';
       x++;
       nr++;
     }
@@ -180,23 +180,77 @@ CheckerParentID();
   }
   else
     movePown();
+}
 
+function StartmovePownBlue(){
+CheckerID();
+CheckerParentID();
+  if(CheckIDarea == "#pole9" || CheckIDarea == "#pole10" || CheckIDarea == "#pole20" || CheckIDarea == "#pole21")
+   {
+      /* if(cube == 6) */
+     document.querySelector("#pole6").appendChild(document.querySelector(CheckID));
+  }
+  else
+    movePown();
+}
 
+function StartmovePownGreen(){
+CheckerID();
+CheckerParentID();
+  if(CheckIDarea == "#pole108" || CheckIDarea == "#pole109" || CheckIDarea == "#pole119" || CheckIDarea == "#pole120")
+   {
+      /* if(cube == 6) */
+     document.querySelector("#pole76").appendChild(document.querySelector(CheckID));
+  }
+  else
+    movePown();
+}
+
+function StartmovePownYellow(){
+CheckerID();
+CheckerParentID();
+  if(CheckIDarea == "#pole99" || CheckIDarea == "#pole100" || CheckIDarea == "#pole110" || CheckIDarea == "#pole111")
+   {
+      /* if(cube == 6) */
+     document.querySelector("#pole114").appendChild(document.querySelector(CheckID));
+  }
+  else
+    movePown();
 }
 
 function movePown(){
   CheckerID();
   CheckerParentID();
+  
+  var x;
   for(i=0; i<40; i++)
     {
       
       if(CheckIDarea == polaRuch[i])
         {
-          document.querySelector(polaRuch[i + cube]).appendChild(document.querySelector(CheckID));   
+          x = i + cube;
+          if(x > 39)
+            {
+              x =  x - 40;
+            }
+        
+          document.querySelector(polaRuch[x]).appendChild(document.querySelector(CheckID));     
         }
-    
     }
+  spankPown();
 }
 
+function spankPown(){
+  CheckerParentID();
+
+  var x;
+  var dupa;
+   var el = document.querySelector(CheckIDarea);
+  x = + el.childElementCount;
+  if(x > 1)
+    {
+      document.querySelector("#pole11").appendChild(document.querySelector(CheckID));
+    } 
+}
 
 
