@@ -2,22 +2,28 @@
 
 .hands {
   width: 40vw;
-  height: 550px;
+  height: 540px;
   margin: 20px;
+  transition-duration: .05s;
 }
 
 #leftHands {
   position: absolute;
-  top: 0;
+  top: 160px;
   left: 0;
   right: 700px;
   bottom: 0;
   margin: auto;
 }
 
+#leftHands:hover{
+
+  cursor: pointer;
+}
+
 #rightHands{
   position: absolute;
-  top: 0;
+  top: 160px;
   right: 0;
   left: 700px;
   bottom: 0;
@@ -64,3 +70,41 @@ img{
     font-size: 48px;
     font-family: "Times New roman", Times, sans-serif;
   }
+
+.choose{
+  border: solid 2px;
+  border-radius: 15px;
+  border-color: #121212;
+  display: inline-block;
+  margin: 20px 10px 10px auto;
+  height: 110px;
+  min-width: 180px;
+}
+
+.choose:hover{
+  border-color: cornflowerblue;
+  cursor: pointer;
+}
+
+
+.choose img{
+  height: 90px;
+  margin: 10px 5px 5px 5px;
+  text-align: center;
+}
+
+.menu{
+  width: 100vw;
+  text-align: center;
+  position: fixed;
+  height: 150px;
+  bottom: 60px;
+}
+
+.pkt{
+  width: 50vw;
+  text-align: center;
+  height: 70px;
+  bottom: 555px;
+  margin-top: 10px;
+}
